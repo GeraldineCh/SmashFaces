@@ -1,0 +1,16 @@
+
+.titulo {
+    font-family: 'Rokkitt', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.guion {
+    width: 10px;
+    margin: 0.5 0em !important;
+    border-top: 2px solid black!important;
+}
+
+.bajada {
+    font-family: 'Roboto', sans-serif;
+}
