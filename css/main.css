@@ -47,3 +47,7 @@ img {
 .white {
     color: white;
 }
+
+ #sel1 {
+     background: #CCCCCC !important;
+ }
