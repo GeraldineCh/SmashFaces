@@ -3,11 +3,12 @@ $(function(){
 	var tornado = function(array){
 		return Math.floor(Math.random()*array.length);
 	};
+    
 	var indice;
 	var tries=0;
 	var displayPictures = function(sede, contenedor, array){
 		indice = tornado(array);
-		contenedorImg.attr("src","img/"+sede+"/"+array[indice].image);
+		foto.attr("src","img/"+sede+"/"+array[indice].image);
 		var puntos = $("#puntos");
 		var error = 0;
 
@@ -19,40 +20,46 @@ $(function(){
 			if(nombre.val().toLowerCase() === array[indice].name.toLowerCase()){
 				tries=0;
 				nombre.val("");
-				puntos.text(eval(puntos.text())+5);
-				$(".mensaje").text("Success");
+				puntos.text(eval(puntos.text())+2.5);
+				$("#alert").text("Success");
 				indice = tornado(array);													
 				setTimeout(function(){
-					contenedorImg.attr("src","img/"+sede+"/"+array[indice].image);
+					foto.attr("src","img/"+sede+"/"+array[indice].image);
 				},1000);
 
-			}else{
+			}
+            
+            else {
 				if(tries <= 4){
 					nombre.val("");
-				}else{
+                    $("#alert").text("Sigue intentando");
+				}
+                
+            else {
 					tries=0;
 					indice = tornado(array);													
 						setTimeout(function(){
-							contenedorImg.attr("src","img/"+sede+"/"+array[indice].image);
+							foto.attr("src","img/"+sede+"/"+array[indice].image);
 						},3000);					
-					
-					puntos.text(eval(puntos.text())-1);;
+					puntos.text(eval(puntos.text())-0.5);
+                    nombre.val("");
+                    $("#alert").text("");
 				}
-				$("#alert").text("Sigue intentando");				
+								
 			}
 		});
 
 	};
 
-	var contenedorImg = $("img");
+	var foto = $("img");
 	
 	$("#sel1").on("change", function(){
 		sede = $(this).val();
 	
 		if(sede === "peru"){
-			displayPictures(sede, contenedorImg, peru);
+			displayPictures(sede, foto, peru);
 		}else{
-			displayPictures(sede, contenedorImg, mexico);
+			displayPictures(sede, foto, mexico);
 		}
 	});
 	

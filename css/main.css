@@ -24,6 +24,10 @@
     background-color: lightgoldenrodyellow;
 }
 
+.col-md-5 {
+    padding-right: 0 !important;
+}
+
 img {
     height: 400px;
     width: 100%;
@@ -31,6 +35,8 @@ img {
 
 #nombre {
     background-color: #333333;
+    height: 400px;
+    padding: 4em;
 }
 
 .btn {
