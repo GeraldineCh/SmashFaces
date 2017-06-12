@@ -12,47 +12,58 @@
     <title>Smash Faces</title>
   </head>
   <body>
-  <div class="container">
-   <div id="cabecera">
-       <div class="titulo"> 
-           Smash Faces <br>
-           <hr class="guion">
-        </div>
-        <div class="bajada">
-            Bienvenidas al juego de Smash Faces, tu misión es poder identificar a todas tus compañeras de clase ingesando apara ello su nombre. Tienes 5 oportunidades antes de perder un punto y pasar a la siguiente.
-        </div>
-   </div>
-   <div id="juego">
-       <div class="header-juego">
-        <div class="form-inline">
-          <label for="sel1">Elige tu sede: </label>
-          <select class="form-control" id="sel1">
-            <option value="" hidden="">Sede:</option>
-            <option value="peru">Lima</option>
-            <option value="mexico">Mexico</option>
-          </select>
-        </div>
-        <div class="puntaje">
-            Puntos: <span id="puntos">0</span>
-        </div>
-       </div>
-       <div id="fotos">
-           <div class="row">
-               <div id="coder"><img src=""></div>
-               <div id="nombre">
-                    <form>
-                      <div class="form-horizontal">
-                       <label for="input">Ingresa su nombre: </label>
-                        <input type="text" class="form-control" placeholder="Ingrese nombre">
-                      </div>
-                      <button type="submit" class="btn">COMPROBAR</button>
-                      <span id="alert"></span>
-                    </form>
+      <header>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 titulo">
+                      Smash Faces <br>
+                      <hr class="guion">
+                  </div>
+              </div>
+              <div class="row">
+               <div class="col-md-12">
+                <div class="bajada">
+                    Bienvenidas al juego de Smash Faces, tu misión es poder identificar a todas tus compañeras de clase ingesando apara ello su nombre. Tienes 5 oportunidades antes de perder un punto y pasar a la siguiente.
+                </div>
                </div>
-           </div>
-       </div>
-   </div>
-  </div>
+              </div>
+          </div>
+      </header>
+      
+      <section id="juego">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                        <div class="form-inline">
+                          <label for="sel1">Elige tu sede: </label>
+                          <select class="form-control" id="sel1">
+                            <option value="" hidden="">Sede:</option>
+                            <option value="peru">Lima</option>
+                            <option value="mexico">Mexico</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6 puntaje">
+                        Puntos: <span id="puntos">0</span>
+                      </div>
+                  </div>
+                  <div class="row" id="fotos">
+                      <div class="col-md-5">
+                        <div id="coder"><img src=""></div>
+                      </div>
+                      <div class="col-md-7" id="nombre">
+                        <form>
+                          <div class="form-horizontal">
+                           <label for="input" class="white">Ingresa su nombre: </label>
+                            <input type="text" class="form-control" placeholder="Ingrese nombre">
+                          </div>
+                          <button type="submit" class="btn center">COMPROBAR</button>
+                          <span class="white" id="alert"></span>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+      </section>
    
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

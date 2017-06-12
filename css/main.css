@@ -20,20 +20,24 @@
 
 #coder {
     height: 400px;
-    width: 400px;
+    width: 100%;
     background-color: lightgoldenrodyellow;
 }
 
 img {
     height: 400px;
-    width: 400px;
+    width: 100%;
 }
 
-#fotos {
+#nombre {
     background-color: #333333;
 }
 
 .btn {
     background-color: #F9A91A !important;
     color: white !important;
+}
+
+.white {
+    color: white;
 }
