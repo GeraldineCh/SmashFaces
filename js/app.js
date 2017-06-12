@@ -20,9 +20,10 @@ $(function(){
 			if(nombre.val().toLowerCase() === array[indice].name.toLowerCase()){
 				tries=0;
 				nombre.val("");
-				puntos.text(eval(puntos.text())+2.5);
-				$("#alert").text("Success");
-				indice = tornado(array);													
+				puntos.text(eval(puntos.text())+5);
+				$("#alert").text("Excelente, acertaste");
+                
+				indice = tornado(array);						
 				setTimeout(function(){
 					foto.attr("src","img/"+sede+"/"+array[indice].image);
 				},1000);
@@ -41,7 +42,7 @@ $(function(){
 						setTimeout(function(){
 							foto.attr("src","img/"+sede+"/"+array[indice].image);
 						},3000);					
-					puntos.text(eval(puntos.text())-0.5);
+					puntos.text(eval(puntos.text())-0.5);;
                     nombre.val("");
                     $("#alert").text("");
 				}
