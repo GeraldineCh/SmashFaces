@@ -25,22 +25,40 @@
    <div id="juego">
        <div class="header-juego">
         <div class="form-inline">
-          <label for="sel1">Select list:</label>
+          <label for="sel1">Elige tu sede: </label>
           <select class="form-control" id="sel1">
-            <option>Lima</option>
-            <option>Mexico</option>
-            <option>Arequipa</option>
+            <option value="" hidden="">Sede:</option>
+            <option value="peru">Lima</option>
+            <option value="mexico">Mexico</option>
           </select>
         </div>
         <div class="puntaje">
-            Puntos: 
+            Puntos: <span id="puntos">0</span>
         </div>
+       </div>
+       <div id="fotos">
+           <div class="row">
+               <div id="coder"><img src=""></div>
+               <div id="nombre">
+                    <form>
+                      <div class="form-horizontal">
+                       <label for="input">Ingresa su nombre: </label>
+                        <input type="text" class="form-control" placeholder="Ingrese nombre">
+                      </div>
+                      <button type="submit" class="btn">COMPROBAR</button>
+                      <span id="alert"></span>
+                    </form>
+               </div>
+           </div>
        </div>
    </div>
   </div>
    
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/peru.js"></script>
+    <script src="js/mexico.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
   </body>
